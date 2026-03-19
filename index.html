@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Unit Converter PRO</title>
+  </head>
+  <body>
+    <main class="converter-shell">
+      <section class="converter-card">
+        <div class="hero-strip"></div>
+
+        <header class="converter-topbar">
+          <div>
+            <p class="eyebrow-label">Smart Tools</p>
+            <h1 class="project-heading">Unit Converter</h1>
+            <p class="project-subtext">
+              Prevod dĺžky, hmotnosti a teploty v čistom modernom rozhraní.
+            </p>
+          </div>
+
+          <div class="status-chip" id="conversionStatus">Ready</div>
+        </header>
+
+        <section class="control-zone">
+          <div class="field-group full-width">
+            <label for="categorySelect" class="field-label">Typ prevodu</label>
+            <div class="select-wrap">
+              <select id="categorySelect" class="field-input field-select">
+                <option value="length">Dĺžka</option>
+                <option value="weight">Hmotnosť</option>
+                <option value="temperature">Stupne</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="fromUnitSelect" class="field-label">Z jednotky</label>
+            <div class="select-wrap">
+              <select id="fromUnitSelect" class="field-input field-select">
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="centimeter">Centimeter</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="toUnitSelect" class="field-label">Na jednotku</label>
+            <div class="select-wrap">
+              <select id="toUnitSelect" class="field-input field-select">
+                <option value="kilometer">Kilometer</option>
+                <option value="meter">Meter</option>
+                <option value="centimeter">Centimeter</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group full-width">
+            <label for="valueInput" class="field-label">Hodnota</label>
+            <input
+              type="number"
+              id="valueInput"
+              class="field-input"
+              placeholder="Napr. 25"
+            />
+          </div>
+        </section>
+
+        <section class="action-row">
+          <button class="primary-btn" id="convertBtn">Convert</button>
+          <button class="ghost-btn" id="swapBtn">Swap</button>
+          <button class="ghost-btn" id="clearBtn">Clear</button>
+        </section>
+
+        <section class="result-panel">
+          <div class="result-topline">
+            <p class="result-label">Výsledok</p>
+            <button class="mini-btn" id="copyBtn">Copy</button>
+          </div>
+
+          <h2 class="result-value" id="resultValue">--</h2>
+          <p class="result-detail" id="resultDetail">
+            Vyber typ prevodu, zadaj hodnotu a klikni na Convert.
+          </p>
+        </section>
+
+        <section class="info-grid">
+          <article class="info-box">
+            <p class="info-title">Dĺžka</p>
+            <p class="info-text">meter, kilometer, centimeter</p>
+          </article>
+
+          <article class="info-box">
+            <p class="info-title">Hmotnosť</p>
+            <p class="info-text">gram, kilogram, libra</p>
+          </article>
+
+          <article class="info-box">
+            <p class="info-title">Teplota</p>
+            <p class="info-text">°C, °F, K</p>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
